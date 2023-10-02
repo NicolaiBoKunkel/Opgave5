@@ -21,9 +21,9 @@ clientsocket.send(data)
 datatilbage = clientsocket.recv(2048)
 response = json.loads(datatilbage.decode())
 
-if 'Result' in response:
-    print("Received result:", response['Result'])
+if 'result' in response:
+    print("Received result:", response['result'])
 else:
-    print("Received error:", response['Error'])
+    print("Received error:", response['error'])
 
 clientsocket.close()
